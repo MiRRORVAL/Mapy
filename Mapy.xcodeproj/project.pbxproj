@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4965ED402B70D6B30099E50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4965ED3F2B70D6B30099E50D /* AppDelegate.swift */; };
 		4965ED422B70D6B30099E50D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4965ED412B70D6B30099E50D /* SceneDelegate.swift */; };
-		4965ED442B70D6B30099E50D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4965ED432B70D6B30099E50D /* ViewController.swift */; };
+		4965ED442B70D6B30099E50D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4965ED432B70D6B30099E50D /* MapViewController.swift */; };
 		4965ED472B70D6B30099E50D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4965ED452B70D6B30099E50D /* Main.storyboard */; };
 		4965ED492B70D6B40099E50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4965ED482B70D6B40099E50D /* Assets.xcassets */; };
 		4965ED4C2B70D6B40099E50D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4965ED4A2B70D6B40099E50D /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		4965ED3C2B70D6B30099E50D /* Mapy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mapy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4965ED3F2B70D6B30099E50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4965ED412B70D6B30099E50D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4965ED432B70D6B30099E50D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4965ED432B70D6B30099E50D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4965ED462B70D6B30099E50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4965ED482B70D6B40099E50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4965ED4B2B70D6B40099E50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,39 @@
 		4965ED3E2B70D6B30099E50D /* Mapy */ = {
 			isa = PBXGroup;
 			children = (
-				4965ED3F2B70D6B30099E50D /* AppDelegate.swift */,
-				4965ED412B70D6B30099E50D /* SceneDelegate.swift */,
-				4965ED432B70D6B30099E50D /* ViewController.swift */,
-				4965ED452B70D6B30099E50D /* Main.storyboard */,
-				4965ED482B70D6B40099E50D /* Assets.xcassets */,
-				4965ED4A2B70D6B40099E50D /* LaunchScreen.storyboard */,
-				4965ED4D2B70D6B40099E50D /* Info.plist */,
+				4965ED542B70E2EB0099E50D /* App */,
+				4965ED552B70E2F90099E50D /* ViewControllers */,
+				4965ED532B70E2D10099E50D /* Storyboards */,
 			);
 			path = Mapy;
+			sourceTree = "<group>";
+		};
+		4965ED532B70E2D10099E50D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4965ED452B70D6B30099E50D /* Main.storyboard */,
+				4965ED4A2B70D6B40099E50D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4965ED542B70E2EB0099E50D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4965ED3F2B70D6B30099E50D /* AppDelegate.swift */,
+				4965ED412B70D6B30099E50D /* SceneDelegate.swift */,
+				4965ED482B70D6B40099E50D /* Assets.xcassets */,
+				4965ED4D2B70D6B40099E50D /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4965ED552B70E2F90099E50D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4965ED432B70D6B30099E50D /* MapViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4965ED442B70D6B30099E50D /* ViewController.swift in Sources */,
+				4965ED442B70D6B30099E50D /* MapViewController.swift in Sources */,
 				4965ED402B70D6B30099E50D /* AppDelegate.swift in Sources */,
 				4965ED422B70D6B30099E50D /* SceneDelegate.swift in Sources */,
 			);
@@ -293,7 +317,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Mapy/Info.plist;
+				INFOPLIST_FILE = Mapy/App/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,7 +345,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Mapy/Info.plist;
+				INFOPLIST_FILE = Mapy/App/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
